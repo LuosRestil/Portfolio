@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Roboto|Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <title>brian smith portfolio</title>
+  </head>
+  <body>
+    <div class="landing-bg-image"></div>
+    <div class="landing-page">
+      <header class="header">
+        <!-- general nav -->
+        <div class="nav">
+          <h1 class="logo">
+            brian_smith
+          </h1>
+          <ul class="nav-list">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+        <!-- mobile nav -->
+        <div class="mobile-nav">
+          <div class="mobile-header">
+            <h1 class="mobile-logo">brian_smith</h1>
+            <div class="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+          <div class="side-menu">
+            <div class="x-wrapper">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="mobile-nav-list">
+              <li><a href="#about">about</a></li>
+              <li><a href="#projects">projects</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="landing-content">
+        <h1>
+          obsessive
+        </h1>
+        <h1>problem solving.</h1>
+      </div>
+    </div>
+    <section id="about">
+      <div class="section-inner about-section-inner">
+        <h1 class="section-header">
+          brian_smith.about()
+        </h1>
+        <img
+          class="profile-image"
+          alt="A photo of Brian Smith"
+          src="https://picsum.photos/200"
+        />
+        <div class="about-text">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+            totam libero a quae doloribus sit similique autem tempore iste vitae
+            velit, id fuga! Dolore cumque corrupti maiores sed quae id enim
+            aperiam, hic fugit magnam voluptate officia commodi optio unde in
+            provident vero ullam itaque. Non qui expedita, odio rem at, delectus
+            repellat nisi, officia fuga consectetur eaque dolorem doloribus
+            aspernatur dolorum. Commodi eveniet et aliquid minima natus
+            possimus. Dignissimos iste natus nesciunt blanditiis explicabo
+            laudantium officiis fugit illo, neque minima debitis nemo delectus
+            eos rem rerum repellendus sunt deleniti vel molestiae maxime, quam
+            totam facilis. Itaque voluptates adipisci impedit.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="section-inner projects-section-inner">
+        <h1 class="section-header">
+          brian_smith.projects()
+        </h1>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-inner contact-section-inner">
+        <h1 class="section-header">
+          brian_smith.contact()
+        </h1>
+        <form action="/email" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+          <label for="text">Message</label>
+          <input type="textarea" id="text" name="text" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
