@@ -25,10 +25,10 @@ app.get("/", (req, res) => {
 
 app.post("/email", (req, res) => {
   var mailOptions = {
-    from: `${req.body.name} <${req.body.email}>`,
+    from: `briansmithdev.com <${req.body.email}>`,
     to: process.env.EMAIL,
-    subject: req.body.subject,
-    text: req.body.text
+    subject: "PORTFOLIO MESSAGE",
+    text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nSubject: ${req.body.subject}\n\n${req.body.text}`
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
