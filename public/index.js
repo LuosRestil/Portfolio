@@ -31,7 +31,6 @@ $(document).ready(() => {
   $(window).scroll(() => {
     $("section").each(function() {
       let sectionOffset = $(this).offset().top;
-      console.log(sectionOffset);
       if (sectionOffset >= $(this).scrollTop()) {
         // $(this).addClass("selected");
       }
