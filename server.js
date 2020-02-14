@@ -34,10 +34,10 @@ app.post("/email", (req, res) => {
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log(error);
-      res.send(error);
+      res.json(error);
     } else {
       console.log("Email sent: " + info.response);
-      res.send("Success");
+      res.send(info);
     }
   });
 });

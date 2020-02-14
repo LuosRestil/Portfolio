@@ -30,7 +30,7 @@
       <header class="header">
         <!-- general nav -->
         <div class="nav">
-          <h1 class="logo">
+          <h1 id="logo" class="logo">
             brian_smith
           </h1>
           <ul class="nav-list">
@@ -69,7 +69,7 @@
     <section id="about">
       <div class="section-inner about-section-inner">
         <h1 class="section-header">
-          brian_smith.about()
+          &lt;about&gt;
         </h1>
         <img
           class="profile-image"
@@ -78,44 +78,67 @@
         />
         <div class="about-text">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-            totam libero a quae doloribus sit similique autem tempore iste vitae
-            velit, id fuga! Dolore cumque corrupti maiores sed quae id enim
-            aperiam, hic fugit magnam voluptate officia commodi optio unde in
-            provident vero ullam itaque. Non qui expedita, odio rem at, delectus
-            repellat nisi, officia fuga consectetur eaque dolorem doloribus
-            aspernatur dolorum. Commodi eveniet et aliquid minima natus
-            possimus. Dignissimos iste natus nesciunt blanditiis explicabo
-            laudantium officiis fugit illo, neque minima debitis nemo delectus
-            eos rem rerum repellendus sunt deleniti vel molestiae maxime, quam
-            totam facilis. Itaque voluptates adipisci impedit.
+            &nbsp;&nbsp;&nbsp;&nbsp;I was born and raised in rural North
+            Carolina, in the foothills of the Appalachian Mountains. From an
+            early age, I had an affinity for the arts, particularly music, and
+            went to school at UNC-Greensboro for music performance. Quickly
+            learning that my degree had little to no real-world benefit, I left,
+            and worked menial service-industry jobs before finally becoming a
+            full-time touring guitarist in Nashville, Tennessee. This lasted the
+            better part of a decade, until the winter of 2018, when I suffered a
+            nervous system malfunction that put an end to my physically
+            demanding career. I spent the next year in recovery, trying to find
+            anything that could fill the hole left by the loss of my obsession.
+            I finally found this in computer programming.
           </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;I began by learning the basics of
+            programming and computational thinking with Python, completing the
+            MITx course, "Introduction to Computer Science and Programming Using
+            Python". I then completed the HarvardX course, "CS50's Introduction
+            to Computer Science", which introduces computer science concepts
+            such as memory management and data structures with C, then steps
+            into some familiar territory with Python, finally moving on to web
+            programming with HTML, CSS, and SQL using Flask. Since web
+            programming seemed to provide the best opportunities for someone
+            self-taught, I went through the freeCodeCamp.org curriculum, earning
+            their Full Stack certification, (MERN stack), with
+            sub-certifications in Responsive Web Design, JavaScript Algorithms
+            and Data Structures, Front End Libraries, Data Visualization, APIs
+            and Microservices, and Information Security and Quality Assurance.
+            I'm now looking to launch a new career with the skills I've
+            acquired.
+          </p>
+          <h1>&lt;&#47;about&gt;</h1>
         </div>
       </div>
     </section>
     <section id="projects">
       <div class="section-inner projects-section-inner">
         <h1 class="section-header">
-          brian_smith.projects()
+          &lt;projects&gt;
         </h1>
+        <h1>&lt;&#47;projects&gt;</h1>
       </div>
     </section>
     <section id="contact">
       <div class="section-inner contact-section-inner">
         <h1 class="section-header">
-          brian_smith.contact()
+          &lt;contact&gt;
         </h1>
-        <form action="/email" method="POST">
+        <!-- add autocomplete="off" to form -->
+        <form id="contact-form" autocomplete="off">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" value="" required />
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" value="" required />
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required />
+          <input type="text" id="subject" name="subject" value="" required />
           <label for="text">Message</label>
-          <input type="textarea" id="text" name="text" required />
+          <textarea id="text" name="text" value="" required></textarea>
           <button type="submit">Submit</button>
         </form>
+        <h1>&lt;&#47;contact&gt;</h1>
       </div>
     </section>
     <script src="../public/index.js"></script>

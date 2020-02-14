@@ -9,13 +9,16 @@ $(document).ready(() => {
     $(".menu-toggle").removeClass("hide-with-opacity");
   });
 
+  // change nav on scroll
   $(document).scroll(() => {
     if ($(document).scrollTop() > 95) {
       $(".nav").addClass("nav-beyond-landing");
-      $(".logo").addClass("hidden");
+      $("#logo").removeClass("logo");
+      $("#logo").addClass("hide-with-width");
     } else {
       $(".nav").removeClass("nav-beyond-landing");
-      $(".logo").removeClass("hidden");
+      $("#logo").addClass("logo");
+      $("#logo").removeClass("hide-with-width");
     }
   });
 
@@ -54,5 +57,28 @@ $(document).ready(() => {
       $(".side-menu").removeClass("show-menu");
       $(".menu-toggle").removeClass("hide-with-opacity");
     }
+  });
+
+  // form submission
+  $("#contact-form").submit(e => {
+    e.preventDefault();
+    $.ajax({
+      // url: "/email",
+      url: "https://probable-eureka.herokuapp.com/email",
+      type: "POST",
+      dataType: "json",
+      data: $("#contact-form").serialize(),
+      success: function(response) {
+        console.log("success.");
+        $("#contact-form").html(
+          "<div class='form-success'><h2>Your message has been sent! Thanks for getting in touch.</h2></div>"
+        );
+      },
+      error: function(xhr, status, error) {
+        $("#contact-form").html(
+          "<div class='form-failure'><h2>Uh-oh! Something went horribly wrong. You can email me directly at <a href='mailto: thetruebriansmith@gmail.com'>thetruebriansmith@gmail.com</a></h2></div>"
+        );
+      }
+    });
   });
 });

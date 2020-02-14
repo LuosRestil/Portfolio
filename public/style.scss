@@ -56,6 +56,10 @@ img {
   }
 }
 
+#logo {
+  transition: all 0.3s;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -68,6 +72,7 @@ img {
     min-width: 200px;
     flex: 1;
     transition: all 0.3s;
+    text-align: left;
   }
   ul {
     flex: 2;
@@ -91,7 +96,6 @@ img {
   .menu-toggle {
     font-size: 2rem;
     transition: text-shadow 0.3s;
-    transition: font-size 0.3s;
     &:hover {
       text-shadow: 2px 2px 5px white;
       font-size: 2.1rem;
@@ -152,6 +156,12 @@ img {
   opacity: 0;
 }
 
+.hide-with-width {
+  text-align: left;
+  width: 0px;
+  overflow: hidden;
+}
+
 .nav-beyond-landing {
   background: rgba(20, 20, 20, 0.9);
   justify-content: center;
@@ -173,30 +183,105 @@ section {
 }
 
 .section-inner {
-  border: 1px solid blue;
-  height: calc(100vh - 4.3rem);
-  background: rgba(20, 20, 20, 0.8);
-  h1 {
-    margin-top: 1rem;
-  }
+  background: rgba(20, 20, 20, 0.7);
+  padding: 2rem;
+}
+
+.about-section-inner {
   .profile-image {
     border-radius: 50%;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    max-width: 700px;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .projects-section-inner {
-  border: 1px solid green;
 }
 
 .contact-section-inner {
-  border: 1px solid yellow;
+}
+
+#contact-form {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: height 0.3s;
+  input {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  textarea {
+    font-size: 1rem;
+    width: 100%;
+    height: 35vh;
+    margin-bottom: 1rem;
+  }
+  button {
+    color: white;
+    background: dodgerblue;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    &:hover {
+      background: rgb(24, 114, 204);
+    }
+    &:active {
+      background: rgb(20, 97, 175);
+    }
+  }
+}
+
+.form-success {
+  border: 5px solid rgb(96, 250, 96);
+  border-radius: 15px;
+  color: rgb(96, 250, 96);
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.form-failure {
+  border: 5px solid rgb(247, 68, 68);
+  border-radius: 15px;
+  color: rgb(247, 68, 68);
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  overflow: scroll;
+  a {
+    color: rgb(117, 204, 255);
+    font-size: 1.25rem;
+  }
 }
 
 /* MOBILE */
 @media screen and (max-width: 615px) {
   .nav {
     display: none;
+  }
+
+  #contact-form {
+    width: 100%;
   }
 }
 
