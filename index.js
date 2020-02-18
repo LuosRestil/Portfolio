@@ -81,4 +81,20 @@ $(document).ready(() => {
       }
     });
   });
+
+  // show and hide project info
+  $(".tile-icon").click(function(e) {
+    console.log("info icon click");
+    $(this)
+      .siblings(".tile-tooltip")
+      .removeClass("hide-tooltip");
+    $(".menu-toggle").addClass("hidden");
+  });
+  $(".tile-tooltip-x-wrapper").click(function(e) {
+    $(this)
+      .parent()
+      .parent()
+      .addClass("hide-tooltip");
+    $(".menu-toggle").removeClass("hidden");
+  });
 });
