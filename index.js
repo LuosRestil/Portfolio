@@ -23,7 +23,7 @@ $(document).ready(() => {
   });
 
   $(document).scroll(() => {
-    if ($(document).scrollTop() > 250) {
+    if ($(document).scrollTop() > 230) {
       $(".mobile-logo").addClass("hide-with-opacity");
     } else {
       $(".mobile-logo").removeClass("hide-with-opacity");
