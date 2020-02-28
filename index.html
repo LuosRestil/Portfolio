@@ -60,10 +60,8 @@
         </div>
       </header>
       <div class="landing-content">
-        <h1>
-          clever
-        </h1>
-        <h1>message here.</h1>
+        <p><span id="typewriter1" class="caret"></span></p>
+        <p><span id="typewriter2"></span></p>
       </div>
     </div>
     <section id="about">
@@ -77,36 +75,16 @@
           src="https://picsum.photos/200"
         />
         <div class="about-text">
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Amet doloremque harum sequi fugiat animi error
-            facere perspiciatis distinctio voluptatum, dolorum perferendis,
-            voluptates optio quaerat doloribus vel totam culpa non autem nihil.
-            Repudiandae ratione, placeat exercitationem nam, ducimus, quam eius
-            quisquam voluptatum quis obcaecati natus. Facere provident sapiente
-            perferendis inventore sit?
+          <p>Hi, I'm Brian Smith, a musician turned full-stack web developer, based in Nashville, Tennessee, looking for my first job in the tech industry. In less than a year, I completed MITx's "Introduction to Computer Science and Programming Using Python", HarvardX's "CS50's Introduction to Computer Science", and acquired the freeCodeCamp.org Full Stack Certification, (an estimated 1800 hours of course work). I'm a fast learner who loves puzzles and a challenge, and I'm ready to contribute to your next project!
           </p>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Sunt, architecto, autem doloribus esse eligendi
-            magni voluptatem facilis nulla voluptates dolores numquam qui?
-            Soluta quas minima asperiores autem voluptatum corporis velit
-            dignissimos maxime nam ipsam sint cumque sit tenetur consequatur
-            enim illum, tempore tempora nemo voluptate quod modi. Fuga, est aut
-            laudantium qui, minima cupiditate et cum tenetur officiis eaque
-            facilis iste sint natus modi dolorum porro culpa soluta minus.
-            Dolores libero quasi voluptatibus recusandae at esse, labore
-            voluptate voluptates impedit ipsa assumenda voluptatem sapiente
-            similique, vero odit. Molestiae nobis provident itaque earum
-            corrupti possimus iste inventore, esse quod beatae aliquam sunt
-            laboriosam deserunt dignissimos ea assumenda necessitatibus, hic
-            obcaecati dolorem omnis voluptatum voluptates neque, perspiciatis
-            eveniet? Dolor illo a id maxime. Enim iure accusamus vel quae,
-            doloremque perferendis dolorum odit temporibus architecto labore!
-            Optio.
+            Language Proficiencies: Python, JavaScript, HTML, CSS.
           </p>
-          <h1>&lt;&#47;about&gt;</h1>
+          <p>
+            Framework Proficiencies: Node.js/Express, Flask, React, jQuery, Bootstrap
+          </p>
         </div>
+        <h1>&lt;&#47;about&gt;</h1>
       </div>
     </section>
     <section id="projects">
@@ -116,11 +94,11 @@
         </h1>
         <div class="tile-container">
           <div class="tile">
-            <a href="#">
-              <img class="tile-img" src="https://picsum.photos/1000" />
+            <a href="https://spelling-bee-helper.herokuapp.com/">
+              <img class="tile-img" src="spellingBee.png" alt="Screenshot of Spelling Bee Helper app." title="Open the web app!" />
             </a>
             <div class="tile-footer">
-              <h2 class="tile-name">Test Project1</h2>
+              <h2 class="tile-name">NYT Spelling Bee</h2>
               <div class="tile-icons">
                 <i
                   class="fas fa-info-circle tile-info tile-icon"
@@ -132,17 +110,13 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Animi architecto saepe eos doloremque beatae est corporis
-                      quidem ratione obcaecati ex impedit laborum quae deserunt
-                      iusto quo vero, tenetur unde aut necessitatibus accusamus
-                      voluptas ducimus accusantium dolores! Exercitationem
-                      laboriosam beatae omnis quod, aperiam neque fuga officiis
-                      dicta dolores? Culpa, debitis suscipit.
+                      A helper app for the Sunday New York Times Spelling Bee puzzle, built with vanilla JavaScript and Node.js. When a word is submitted, it passes through a layer of validation that determines whether it conforms to the rules of the game. Then HTTP requests are sent to potential entries at merriam-webster.com and lexico.com (by Oxford), where I employ web scraping with Cheerio to determine whether a word is an exact match to an entry in these dictionaries, with no spaces, hyphens, or capitalization. (First implemented in Python using Beautiful Soup as a proof of concept.) Invalid words are rejected, and valid words are added to a list, with the score updated accordingly. Clicking on a word in the list will send requests to Merriam-Webster's and Oxford's dictionary APIs, showing you the word's definition. Your word list and score are kept in local storage until you start a new game.
+                      Technologies and packages:
+                      Node, Express, node-fetch, Cheerio, HTML, CSS, JavaScript.
                     </p>
                   </div>
                 </div>
-                <a href="#">
+                <a href="https://github.com/LuosRestil/SpellingBeeHelper">
                   <i
                     class="fab fa-github tile-github tile-icon"
                     title="See the code on Github!"
@@ -152,11 +126,11 @@
             </div>
           </div>
           <div class="tile">
-            <a href="#">
-              <img class="tile-img" src="https://picsum.photos/1001" />
+            <a href="https://mocktrader.herokuapp.com/">
+              <img class="tile-img" src="mockTrader.png" alt="A screenshot of the Mock Trader app." title="Open the web app!" />
             </a>
             <div class="tile-footer">
-              <h2 class="tile-name">Test Project2</h2>
+              <h2 class="tile-name">Mock Trader</h2>
               <div class="tile-icons">
                 <i
                   class="fas fa-info-circle tile-info tile-icon"
@@ -168,31 +142,13 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Id voluptatem delectus laudantium, debitis mollitia itaque
-                      nesciunt repudiandae alias molestiae iusto eum amet
-                      impedit nulla dicta ipsam, commodi, ipsa eaque nemo sequi
-                      provident laboriosam! Et vero ullam veniam quos voluptate
-                      exercitationem ea inventore alias, debitis cumque
-                      cupiditate voluptatibus est, officiis praesentium dolores
-                      unde doloremque. Fuga sapiente, rerum delectus a eum
-                      reiciendis consequatur repellat enim inventore ratione at
-                      numquam quas dolore aperiam reprehenderit dolorem minus ab
-                      vel facere saepe porro iure exercitationem. Labore id
-                      perspiciatis eius minima! Sequi provident ipsam adipisci,
-                      officia pariatur, sunt, inventore libero nemo illum esse
-                      impedit dolores quas! Expedita quo, corporis dolore
-                      mollitia saepe rerum, tempore, dolorum dolor fugit
-                      accusantium vitae! In et sit qui voluptatum numquam
-                      corrupti quia unde suscipit, sed, cupiditate quis
-                      distinctio magnam possimus dignissimos quas corporis
-                      accusamus perferendis minus totam laboriosam obcaecati
-                      delectus debitis? Neque itaque molestias maxime, amet
-                      similique nesciunt? Ut, quo rerum?
+                      A mock stock trader app built with Flask. Create an account and log in to get stock quotes, buy and sell stocks, and keep a portfolio with up-to-the-moment data. Data is stored in a PostgreSQL database and managed with Flask-SQLAlchemy.
+                      Technologies and packages:
+                      Flask, flask-wtf/flask-wtforms, flask-sqlalchemy, flask-bcrypt, flask-login, Requests, flask-mail, Jinja2, HTML, CSS, Bootstrap, Python.
                     </p>
                   </div>
                 </div>
-                <a href="#">
+                <a href="https://github.com/LuosRestil/mock-trader">
                   <i
                     class="fab fa-github tile-github tile-icon"
                     title="See the code on Github!"
@@ -202,11 +158,11 @@
             </div>
           </div>
           <div class="tile">
-            <a href="#">
-              <img class="tile-img" src="https://picsum.photos/1002" />
+            <a href=>
+              <img class="tile-img" src="reactPomodoroClock.png"  title="Open the web app!" alt="Screenshot of React Pomodoro Clock App" />
             </a>
             <div class="tile-footer">
-              <h2 class="tile-name">Test Project3</h2>
+              <h2 class="tile-name">Pomodoro Clock</h2>
               <div class="tile-icons">
                 <i
                   class="fas fa-info-circle tile-info tile-icon"
@@ -218,45 +174,13 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      Peanut butter is the way to a new understanding. Peanut
-                      butter is the unknown element that makes us transcend. We
-                      are peanut butter and peanut butter is us. All hail peanut
-                      butter.
+                      A pomodoro clock app built using React as part of the freeCodeCamp.org Front End Libraries certification. Other React apps made for this certification include a calculator, a soundboard, a random quote generator, and a markdown previewer.
+                      Technologies used:
+                      React, JSX/HTML, CSS.
                     </p>
                   </div>
                 </div>
-                <a href="#">
-                  <i
-                    class="fab fa-github tile-github tile-icon"
-                    title="See the code on Github!"
-                  ></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="tile">
-            <a href="#">
-              <img class="tile-img" src="https://picsum.photos/1004" />
-            </a>
-            <div class="tile-footer">
-              <h2 class="tile-name">Test Project4</h2>
-              <div class="tile-icons">
-                <i
-                  class="fas fa-info-circle tile-info tile-icon"
-                  title="Learn more about this project!"
-                ></i>
-                <div class="tile-tooltip hide-tooltip">
-                  <div class="tile-tooltip-inner">
-                    <div class="tile-tooltip-x-wrapper">
-                      <i class="fas fa-times"></i>
-                    </div>
-                    <p class="tile-description">
-                      Don't you look at me in that tone of voice. You're going
-                      to get it, young man.
-                    </p>
-                  </div>
-                </div>
-                <a href="#">
+                <a href="https://github.com/LuosRestil/react-pomodoro-clock">
                   <i
                     class="fab fa-github tile-github tile-icon"
                     title="See the code on Github!"
@@ -275,7 +199,6 @@
         <h1 class="section-header">
           &lt;contact&gt;
         </h1>
-        <!-- add autocomplete="off" to form -->
         <form id="contact-form" autocomplete="off">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" value="" required />

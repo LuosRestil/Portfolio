@@ -208,11 +208,30 @@ img {
 .landing-content {
   position: relative;
   line-height: 2;
+  font-size: 2.5rem;
   top: 50%;
   text-align: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 2;
+}
+
+.caret {
+  border-right: .05em solid;
+  -webkit-animation: caret 1s steps(1) infinite;
+          animation: caret 1s steps(1) infinite;
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 section {
@@ -266,7 +285,7 @@ section {
 
 .tile-container .tile img {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 
 .tile-container .tile .tile-tooltip {
@@ -306,7 +325,7 @@ section {
 
 .tile-container .tile .tile-tooltip .tile-tooltip-inner {
   margin: 2rem;
-  max-width: 500px;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,6 +350,7 @@ section {
   display: flex;
   position: absolute;
   width: 100%;
+  height: 20%;
   bottom: 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -472,4 +492,9 @@ section {
 }
 
 /* COMPUTERS */
+@media screen and (min-width: 1028px) {
+  .tile {
+    height: 20vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -31,13 +31,19 @@ $(document).ready(() => {
   });
 
   // NOT WORKING *********************************
-  $(window).scroll(() => {
-    $("section").each(function() {
-      let sectionOffset = $(this).offset().top;
-      if (sectionOffset >= $(this).scrollTop()) {
-        // $(this).addClass("selected");
-      }
-    });
+  // Highlight nav links on scroll
+  $(window).scroll(function() {
+    if ($(document).scrollTop() < $('#about').offset().top) {
+      console.log('above sections')
+      $('li').removeClass('selected');
+    } else {
+      $("section").each(function() {
+        if ($(document).scrollTop() > $(this).offset().top) {
+          $('li').removeClass('selected');
+          $(`a[href='#${$(this).attr("id")}']`).parent().addClass('selected')
+        }
+      })
+    }
   });
   // *********************************************
 
@@ -97,4 +103,34 @@ $(document).ready(() => {
       .addClass("hide-tooltip");
     $(".menu-toggle").removeClass("hidden");
   });
+
+  // TYPEWRITER EFFECT
+  var i = 0;
+  var j = 0;
+  var txt1 = '{ full-stack web developer }';
+  let txt2 = '{ problem solver }';
+  var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+  function typeWriter1() {
+    if (i < txt1.length) {
+      document.getElementById("typewriter1").innerHTML += txt1.charAt(i);
+      i++;
+      setTimeout(typeWriter1, speed);
+    }
+  }
+
+  function typeWriter2() {
+    document.getElementById("typewriter1").classList.remove('caret');
+    document.getElementById("typewriter2").classList.add('caret');
+    if (j < txt2.length) {
+      document.getElementById("typewriter2").innerHTML += txt2.charAt(j);
+      j++;
+      setTimeout(typeWriter2, speed);
+    }
+  }
+
+  setTimeout(typeWriter1, 500)
+  setTimeout(typeWriter2, 3000)
 });
+
+
