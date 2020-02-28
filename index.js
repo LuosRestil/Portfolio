@@ -30,7 +30,6 @@ $(document).ready(() => {
     }
   });
 
-  // NOT WORKING *********************************
   // Highlight nav links on scroll
   $(window).scroll(function() {
     if ($(document).scrollTop() < $('#about').offset().top) {
@@ -45,8 +44,8 @@ $(document).ready(() => {
       })
     }
   });
-  // *********************************************
 
+  // highlight links on click
   $(".nav-list li").click(function() {
     $(this).addClass("selected");
     $(".nav-list li")
@@ -69,7 +68,6 @@ $(document).ready(() => {
   $("#contact-form").submit(e => {
     e.preventDefault();
     $.ajax({
-      // url: "/email",
       url: "https://probable-eureka.herokuapp.com/email",
       type: "POST",
       dataType: "json",

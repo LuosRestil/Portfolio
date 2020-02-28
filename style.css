@@ -15,6 +15,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .landing-bg-image {
@@ -283,8 +284,10 @@ section {
 }
 
 .tile-container .tile img {
+  display: block;
   width: 100%;
-  height: 80% !important;
+  height: 80%;
+  margin-bottom: 0;
 }
 
 .tile-container .tile .tile-tooltip {
@@ -347,10 +350,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   width: 100%;
   height: 20%;
-  bottom: 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -359,6 +360,7 @@ section {
           align-items: center;
   background: rgba(0, 0, 100, 0.8);
   padding: 1rem;
+  margin-top: 0;
 }
 
 .tile-container .tile .tile-footer .tile-icons {
