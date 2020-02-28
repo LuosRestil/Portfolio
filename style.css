@@ -285,7 +285,7 @@ section {
 
 .tile-container .tile img {
   width: 100%;
-  height: 80%;
+  height: 80% !important;
 }
 
 .tile-container .tile .tile-tooltip {
