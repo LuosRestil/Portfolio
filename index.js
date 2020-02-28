@@ -33,12 +33,11 @@ $(document).ready(() => {
   // Highlight nav links on scroll
   $(window).scroll(function() {
     if ($(document).scrollTop() < $('#about').offset().top) {
-      console.log('above sections')
-      $('li').removeClass('selected');
+      $('.nav-list').find('li').removeClass('selected');
     } else {
       $("section").each(function() {
-        if ($(document).scrollTop() > $(this).offset().top) {
-          $('li').removeClass('selected');
+        if ($(document).scrollTop() + 10 > $(this).offset().top) {
+          $('.nav-list').find('li').removeClass('selected');
           $(`a[href='#${$(this).attr("id")}']`).parent().addClass('selected')
         }
       })
@@ -47,10 +46,8 @@ $(document).ready(() => {
 
   // highlight links on click
   $(".nav-list li").click(function() {
+    $(".nav-list").find('li').removeClass("selected");
     $(this).addClass("selected");
-    $(".nav-list li")
-      .not(this)
-      .removeClass("selected");
   });
 
   // hides side menu when clicking outside
@@ -103,11 +100,11 @@ $(document).ready(() => {
   });
 
   // TYPEWRITER EFFECT
-  var i = 0;
-  var j = 0;
-  var txt1 = '{ full-stack web developer }';
+  let i = 0;
+  let j = 0;
+  let txt1 = '{ full-stack web developer }';
   let txt2 = '{ problem solver }';
-  var speed = 75; /* The speed/duration of the effect in milliseconds */
+  let speed = 75;
 
   function typeWriter1() {
     if (i < txt1.length) {
