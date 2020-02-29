@@ -107,7 +107,7 @@ img {
 }
 
 .nav ul li:hover a {
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white;
 }
 
 .mobile-header {
@@ -181,7 +181,7 @@ img {
 }
 
 .selected {
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white;
 }
 
 .show-menu {
