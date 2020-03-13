@@ -34,9 +34,9 @@
             brian_smith
           </h1>
           <ul class="nav-list">
-            <li id='about-link'><a href="#about">about</a></li>
-            <li id='projects-link'><a href="#projects">projects</a></li>
-            <li id='contact-link'><a href="#contact">contact</a></li>
+            <li id="about-link"><a href="#about">about</a></li>
+            <li id="projects-link"><a href="#projects">projects</a></li>
+            <li id="contact-link"><a href="#contact">contact</a></li>
           </ul>
         </div>
         <!-- mobile nav -->
@@ -75,13 +75,22 @@
           src="headshot.png"
         />
         <div class="about-text">
-          <p>Hi, I'm Brian Smith, a musician turned full-stack web developer, based in Nashville, Tennessee, looking for my first job in the tech industry. In less than a year, I completed MITx's "Introduction to Computer Science and Programming Using Python", HarvardX's "CS50's Introduction to Computer Science", and acquired the freeCodeCamp.org Full Stack Certification, (an estimated 1800 hours of course work). I'm a fast learner who loves puzzles and a challenge, and I'm ready to contribute to your next project!
+          <p>
+            Hi, I'm Brian Smith, a musician turned full-stack web developer,
+            based in Nashville, Tennessee, looking for my first job in the tech
+            industry. In less than a year, I completed MITx's "Introduction to
+            Computer Science and Programming Using Python", HarvardX's "CS50's
+            Introduction to Computer Science", and acquired the freeCodeCamp.org
+            Full Stack Certification, (an estimated 1800 hours of course work).
+            I'm a fast learner who loves puzzles and a challenge, and I'm ready
+            to contribute to your next project!
           </p>
           <p>
             Language Proficiencies: Python, JavaScript, SQL, HTML, CSS
           </p>
           <p>
-            Framework/Database Proficiencies: Node.js/Express, Flask, React, jQuery, Bootstrap, Flask-SQLAlchemy, PostgreSQL, MongoDB, Mongoose
+            Framework/Database Proficiencies: Node.js/Express, Flask, React,
+            jQuery, Bootstrap, Flask-SQLAlchemy, PostgreSQL, MongoDB, Mongoose
           </p>
         </div>
         <h1>&lt;&#47;about&gt;</h1>
@@ -95,7 +104,64 @@
         <div class="tile-container">
           <div class="tile">
             <a href="https://spelling-bee-helper.herokuapp.com/">
-              <img class="tile-img" src="spellingBee.png" alt="Screenshot of Spelling Bee Helper app." title="Open the web app!" />
+              <img
+                class="tile-img"
+                src="helpDesk.png"
+                alt="Screenshot of Spelling Bee Helper app."
+                title="Open the web app!"
+              />
+            </a>
+            <div class="tile-footer">
+              <h2 class="tile-name">Help Desk</h2>
+              <div class="tile-icons">
+                <i
+                  class="fas fa-info-circle tile-info tile-icon"
+                  title="Learn more about this project!"
+                ></i>
+                <div class="tile-tooltip hide-tooltip">
+                  <div class="tile-tooltip-inner">
+                    <div class="tile-tooltip-x-wrapper">
+                      <i class="fas fa-times"></i>
+                    </div>
+                    <p class="tile-description">
+                      A full-featured, web-based help desk system built with
+                      React. There is authentication in place on both the front
+                      and back end, with different priveleges depending on your
+                      role, (user, support staff, or admin.) Users: Submit
+                      support tickets and view your dashboard where you can see
+                      all the tickets you have submitted. Support staff: View
+                      your dashboard, where you can see all the tickets assigned
+                      to you. You may also view all tickets, or sort tickets by
+                      department, and claim any that you would like to work on.
+                      Admin: All the features of support staff, with an added
+                      search by user function, which will either show the
+                      submitted tickets of a user or the assigned tickets of a
+                      support staff member. Log in to these accounts with the
+                      password "password" to explore the site with different
+                      roles: testAdmin, testSupport, testUser. Technologies and
+                      packages: React (with hooks), React Router, Node, Express,
+                      Passport, Cookie-Session, MongoDB, Mongoose.
+                    </p>
+                  </div>
+                </div>
+                <a href="https://github.com/LuosRestil/SpellingBeeHelper">
+                  <i
+                    class="fab fa-github tile-github tile-icon"
+                    title="See the code on Github!"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile">
+            <a href="https://spelling-bee-helper.herokuapp.com/">
+              <img
+                class="tile-img"
+                src="spellingBee.png"
+                alt="Screenshot of Spelling Bee Helper app."
+                title="Open the web app!"
+              />
             </a>
             <div class="tile-footer">
               <h2 class="tile-name">NYT Spelling Bee</h2>
@@ -110,9 +176,24 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      A helper app for the Sunday New York Times Spelling Bee puzzle, built with vanilla JavaScript and Node.js. When a word is submitted, it passes through a layer of validation that determines whether it conforms to the rules of the game. Then HTTP requests are sent to potential entries at merriam-webster.com and lexico.com (by Oxford), where I employ web scraping with Cheerio to determine whether a word is an exact match to an entry in these dictionaries, with no spaces, hyphens, or capitalization. (First implemented in Python using Beautiful Soup as a proof of concept.) Invalid words are rejected, and valid words are added to a list, with the score updated accordingly. Clicking on a word in the list will send requests to Merriam-Webster's and Oxford's dictionary APIs, showing you the word's definition. Your word list and score are kept in local storage until you start a new game.
-                      Technologies and packages:
-                      Node, Express, node-fetch, Cheerio, HTML, CSS, JavaScript.
+                      A helper app for the Sunday New York Times Spelling Bee
+                      puzzle, built with vanilla JavaScript and Node.js. When a
+                      word is submitted, it passes through a layer of validation
+                      that determines whether it conforms to the rules of the
+                      game. Then HTTP requests are sent to potential entries at
+                      merriam-webster.com and lexico.com (by Oxford), where I
+                      employ web scraping with Cheerio to determine whether a
+                      word is an exact match to an entry in these dictionaries,
+                      with no spaces, hyphens, or capitalization. (First
+                      implemented in Python using Beautiful Soup as a proof of
+                      concept.) Invalid words are rejected, and valid words are
+                      added to a list, with the score updated accordingly.
+                      Clicking on a word in the list will send requests to
+                      Merriam-Webster's and Oxford's dictionary APIs, showing
+                      you the word's definition. Your word list and score are
+                      kept in local storage until you start a new game.
+                      Technologies and packages: Node, Express, node-fetch,
+                      Cheerio, HTML, CSS, JavaScript.
                     </p>
                   </div>
                 </div>
@@ -127,7 +208,12 @@
           </div>
           <div class="tile">
             <a href="https://mocktrader.herokuapp.com/">
-              <img class="tile-img" src="mockTrader.png" alt="A screenshot of the Mock Trader app." title="Open the web app!" />
+              <img
+                class="tile-img"
+                src="mockTrader.png"
+                alt="A screenshot of the Mock Trader app."
+                title="Open the web app!"
+              />
             </a>
             <div class="tile-footer">
               <h2 class="tile-name">Mock Trader</h2>
@@ -142,9 +228,14 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      A mock stock trader app built with Flask. Create an account and log in to get stock quotes, buy and sell stocks, and keep a portfolio with up-to-the-moment data. Data is stored in a PostgreSQL database and managed with Flask-SQLAlchemy.
-                      Technologies and packages:
-                      Flask, flask-wtf/flask-wtforms, flask-sqlalchemy, flask-bcrypt, flask-login, Requests, flask-mail, Jinja2, HTML, CSS, Bootstrap, Python.
+                      A mock stock trader app built with Flask. Create an
+                      account and log in to get stock quotes, buy and sell
+                      stocks, and keep a portfolio with up-to-the-moment data.
+                      Data is stored in a PostgreSQL database and managed with
+                      Flask-SQLAlchemy. Technologies and packages: Flask,
+                      flask-wtf/flask-wtforms, flask-sqlalchemy, flask-bcrypt,
+                      flask-login, Requests, flask-mail, Jinja2, HTML, CSS,
+                      Bootstrap, Python.
                     </p>
                   </div>
                 </div>
@@ -159,7 +250,12 @@
           </div>
           <div class="tile">
             <a href="https://react-pomodoro-how-original.herokuapp.com">
-              <img class="tile-img" src="reactPomodoroClock.png"  title="Open the web app!" alt="Screenshot of React Pomodoro Clock App" />
+              <img
+                class="tile-img"
+                src="reactPomodoroClock.png"
+                title="Open the web app!"
+                alt="Screenshot of React Pomodoro Clock App"
+              />
             </a>
             <div class="tile-footer">
               <h2 class="tile-name">Pomodoro Clock</h2>
@@ -174,9 +270,12 @@
                       <i class="fas fa-times"></i>
                     </div>
                     <p class="tile-description">
-                      A pomodoro clock app built using React as part of the freeCodeCamp.org Front End Libraries certification. Other React apps made for this certification include a calculator, a soundboard, a random quote generator, and a markdown previewer.
-                      Technologies used:
-                      React, JSX/HTML, CSS.
+                      A pomodoro clock app built using React as part of the
+                      freeCodeCamp.org Front End Libraries certification. Other
+                      React apps made for this certification include a
+                      calculator, a soundboard, a random quote generator, and a
+                      markdown previewer. Technologies used: React, JSX/HTML,
+                      CSS.
                     </p>
                   </div>
                 </div>
