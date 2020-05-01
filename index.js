@@ -31,27 +31,29 @@ $(document).ready(() => {
   });
 
   // Highlight nav links on scroll
-  $(window).scroll(function() {
-    if ($(document).scrollTop() < $('#about').offset().top) {
-      $('.nav-list').find('li').removeClass('selected');
+  $(window).scroll(function () {
+    if ($(document).scrollTop() < $("#about").offset().top) {
+      $(".nav-list").find("li").removeClass("selected");
     } else {
-      $("section").each(function() {
+      $("section").each(function () {
         if ($(document).scrollTop() + 10 > $(this).offset().top) {
-          $('.nav-list').find('li').removeClass('selected');
-          $(`a[href='#${$(this).attr("id")}']`).parent().addClass('selected')
+          $(".nav-list").find("li").removeClass("selected");
+          $(`a[href='#${$(this).attr("id")}']`)
+            .parent()
+            .addClass("selected");
         }
-      })
+      });
     }
   });
 
   // highlight links on click
-  $(".nav-list li").click(function() {
-    $(".nav-list").find('li').removeClass("selected");
+  $(".nav-list li").click(function () {
+    $(".nav-list").find("li").removeClass("selected");
     $(this).addClass("selected");
   });
 
   // hides side menu when clicking outside
-  $(window).click(function(e) {
+  $(window).click(function (e) {
     if (
       $(".side-menu").hasClass("show-menu") &&
       !e.target.classList.contains("fa-bars")
@@ -62,48 +64,43 @@ $(document).ready(() => {
   });
 
   // form submission
-  $("#contact-form").submit(e => {
+  $("#contact-form").submit((e) => {
     e.preventDefault();
     $.ajax({
       url: "https://probable-eureka.herokuapp.com/email",
       type: "POST",
       dataType: "json",
       data: $("#contact-form").serialize(),
-      success: function(response) {
+      success: function (response) {
         console.log("success.");
         $("#contact-form").html(
           "<div class='form-success'><h2>Your message has been sent! Thanks for getting in touch.</h2></div>"
         );
       },
-      error: function(xhr, status, error) {
+      error: function (xhr, status, error) {
         $("#contact-form").html(
-          "<div class='form-failure'><h2>Uh-oh! Something went horribly wrong. You can email me directly at <a href='mailto: thetruebriansmith@gmail.com'>thetruebriansmith@gmail.com</a></h2></div>"
+          "<div class='form-failure'><h2>Uh-oh! Something went horribly wrong. You can email me directly at <a href='mailto: briansmithwebdeveloper@gmail.com'>briansmithwebdeveloper.com</a></h2></div>"
         );
-      }
+      },
     });
   });
 
   // show and hide project info
-  $(".tile-icon").click(function(e) {
+  $(".tile-icon").click(function (e) {
     console.log("info icon click");
-    $(this)
-      .siblings(".tile-tooltip")
-      .removeClass("hide-tooltip");
+    $(this).siblings(".tile-tooltip").removeClass("hide-tooltip");
     $(".menu-toggle").addClass("hidden");
   });
-  $(".tile-tooltip-x-wrapper").click(function(e) {
-    $(this)
-      .parent()
-      .parent()
-      .addClass("hide-tooltip");
+  $(".tile-tooltip-x-wrapper").click(function (e) {
+    $(this).parent().parent().addClass("hide-tooltip");
     $(".menu-toggle").removeClass("hidden");
   });
 
   // TYPEWRITER EFFECT
   let i = 0;
   let j = 0;
-  let txt1 = '{ full-stack web developer }';
-  let txt2 = '{ problem solver }';
+  let txt1 = "{ full-stack web developer }";
+  let txt2 = "{ problem solver }";
   let speed = 75;
 
   function typeWriter1() {
@@ -115,8 +112,8 @@ $(document).ready(() => {
   }
 
   function typeWriter2() {
-    document.getElementById("typewriter1").classList.remove('caret');
-    document.getElementById("typewriter2").classList.add('caret');
+    document.getElementById("typewriter1").classList.remove("caret");
+    document.getElementById("typewriter2").classList.add("caret");
     if (j < txt2.length) {
       document.getElementById("typewriter2").innerHTML += txt2.charAt(j);
       j++;
@@ -124,8 +121,6 @@ $(document).ready(() => {
     }
   }
 
-  setTimeout(typeWriter1, 500)
-  setTimeout(typeWriter2, 3000)
+  setTimeout(typeWriter1, 500);
+  setTimeout(typeWriter2, 3000);
 });
-
-
