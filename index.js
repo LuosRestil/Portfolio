@@ -1,14 +1,13 @@
-// function addHit() {
-//   let options = {
-//     method: "POST",
-//     body: JSON.stringify({}),
-//   };
-//   fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
-// }
-
-// window.onload = addHit;
+function addHit() {
+  let options = {
+    method: "POST",
+    body: JSON.stringify({}),
+  };
+  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
+}
 
 $(document).ready(() => {
+  addHit();
   // show/hide mobile side menu
   $(".menu-toggle").click(() => {
     $(".side-menu").addClass("show-menu");
