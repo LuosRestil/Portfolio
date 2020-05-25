@@ -1,9 +1,11 @@
 function addHit() {
   let options = {
     method: "POST",
-    body: JSON.stringify({}),
+    body: JSON.stringify({ something: "something" }),
   };
-  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
+  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options).then(
+    (response) => response
+  );
 }
 
 window.onload = addHit;
