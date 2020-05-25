@@ -1,3 +1,14 @@
+function addHit() {
+  let options = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({}),
+  };
+  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
+}
+
+window.onload = addHit;
+
 $(document).ready(() => {
   // show/hide mobile side menu
   $(".menu-toggle").click(() => {
