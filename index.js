@@ -4,7 +4,10 @@ function addHit() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({}),
   };
-  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
+  fetch(
+    "https://hepatitis-mongoose.herokuapp.com/hit",
+    options
+  ).then((response) => console.log(response.status));
 }
 
 window.onload = addHit;
