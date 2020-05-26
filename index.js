@@ -8,6 +8,18 @@ function addHit() {
 
 $(document).ready(() => {
   // addHit();
+  $.ajax({
+    url: "https://hepatitis-mongoose.herokuapp.com/hit",
+    type: "POST",
+    dataType: "json",
+    data: { mockdata: "mockdata" },
+    success: function (response) {
+      // do nothing
+    },
+    error: function (xhr, status, error) {
+      console.log(error);
+    },
+  });
   // show/hide mobile side menu
   $(".menu-toggle").click(() => {
     $(".side-menu").addClass("show-menu");
