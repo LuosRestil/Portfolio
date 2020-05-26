@@ -1,23 +1,23 @@
-function addHit() {
-  let options = {
-    method: "POST",
-    body: JSON.stringify({}),
-  };
-  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
-}
+// function addHit() {
+//   let options = {
+//     method: "POST",
+//     body: JSON.stringify({}),
+//   };
+//   fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
+// }
 
 $(document).ready(() => {
   // addHit();
   $.ajax({
-    url: "https://hepatitis-mongoose.herokuapp.com/hit",
+    url: "https://probable-eureka.herokuapp.com/hit",
     type: "POST",
     dataType: "json",
-    data: { mockdata: "mockdata" },
+    data: { fakedata: "fakedata" },
     success: function (response) {
-      // do nothing
+      console.log("success.");
     },
     error: function (xhr, status, error) {
-      console.log(error);
+      console.log("error: " + error);
     },
   });
   // show/hide mobile side menu
