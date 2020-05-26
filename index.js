@@ -1,11 +1,11 @@
 function addHit() {
-  let options = {
-    method: "POST",
-    body: JSON.stringify({ nodata: "nodata" }),
-  };
+  // let options = {
+  //   method: "POST",
+  //   body: JSON.stringify({ nodata: "nodata" }),
+  // };
   fetch(
-    "https://hepatitis-mongoose.herokuapp.com/hit",
-    options
+    "https://hepatitis-mongoose.herokuapp.com/hit"
+    // options
   ).then((response) => console.log(response));
 }
 
