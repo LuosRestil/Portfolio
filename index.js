@@ -3,10 +3,7 @@ function addHit() {
     method: "POST",
     body: JSON.stringify({ nodata: "nodata" }),
   };
-  fetch(
-    "https://hepatitis-mongoose.herokuapp.com/hit",
-    options
-  ).then((response) => console.log(response));
+  fetch("https://hepatitis-mongoose.herokuapp.com/hit", options);
 }
 
 $(document).ready(() => {
