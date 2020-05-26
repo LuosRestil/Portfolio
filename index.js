@@ -17,6 +17,8 @@ $(document).ready(() => {
       console.log("working");
     },
     error: function (xhr, status, error) {
+      console.log("xhr: " + xhr);
+      console.log("status: " + status);
       console.log("error: " + error);
     },
   });
