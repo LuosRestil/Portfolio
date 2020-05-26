@@ -81,7 +81,6 @@ $(document).ready(() => {
       dataType: "json",
       data: $("#contact-form").serialize(),
       success: function (response) {
-        console.log("success.");
         $("#contact-form").html(
           "<div class='form-success'><h2>Your message has been sent! Thanks for getting in touch.</h2></div>"
         );
