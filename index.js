@@ -14,7 +14,7 @@ $(document).ready(() => {
     dataType: "json",
     data: { fakedata: "fakedata" },
     success: function (response) {
-      console.log("success.");
+      console.log("working");
     },
     error: function (xhr, status, error) {
       console.log("error: " + error);
