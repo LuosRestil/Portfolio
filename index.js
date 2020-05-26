@@ -7,7 +7,6 @@ function addHit() {
     "https://hepatitis-mongoose.herokuapp.com/hit",
     options
   ).then((response) => console.log(response));
-  // .then((json) => console.log(json));
 }
 
 $(document).ready(() => {
