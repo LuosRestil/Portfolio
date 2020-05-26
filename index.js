@@ -8,20 +8,6 @@
 
 $(document).ready(() => {
   // addHit();
-  $.ajax({
-    url: "https://probable-eureka.herokuapp.com/hit",
-    type: "POST",
-    dataType: "json",
-    data: { fakedata: "fakedata" },
-    success: function (response) {
-      console.log("working");
-    },
-    error: function (xhr, status, error) {
-      console.log("xhr: " + xhr.responseText);
-      console.log("status: " + status);
-      console.log("error: " + error);
-    },
-  });
   // show/hide mobile side menu
   $(".menu-toggle").click(() => {
     $(".side-menu").addClass("show-menu");
