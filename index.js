@@ -7,7 +7,7 @@ function addHit() {
 }
 
 $(document).ready(() => {
-  // addHit();
+  addHit();
   // show/hide mobile side menu
   $(".menu-toggle").click(() => {
     $(".side-menu").addClass("show-menu");
