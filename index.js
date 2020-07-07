@@ -87,7 +87,7 @@ $(document).ready(() => {
       },
       error: function (xhr, status, error) {
         $("#contact-form").html(
-          "<div class='form-failure'><h2>Uh-oh! Something went horribly wrong. You can email me directly at <a href='mailto: briansmithwebdeveloper@gmail.com'>briansmithwebdeveloper.com</a></h2></div>"
+          "<div class='form-failure'><h2>Uh-oh! Something went horribly wrong. You can email me directly at <a href='mailto: briansmithwebdeveloper@gmail.com'>briansmithwebdeveloper@gmail.com</a></h2></div>"
         );
       },
     });
